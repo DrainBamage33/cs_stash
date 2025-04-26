@@ -1,0 +1,20 @@
+class Solution {
+public:
+    // Basic modulo power
+    long long power(long long a, long long b, long long mod){
+        long long ans = 1;
+        for(long long i = b; i>0; i>>=1){
+            if (i&1)ans = (ans * a) % mod;
+            a = (a * a) % mod;
+        }
+        return ans;
+    } 
+    // Basic combinotorics.
+    // _ _ _ _
+    // 5 4 5 4 (5 even ways, 4 odd ways)
+    long long countGoodNumbers(long long n) {
+        long long even = power(5, n/2 + n%2, 1000000007);
+        long long odd = power(4, n/2, 1000000007);
+        return (even * odd) % 1000000007;
+    }
+};
