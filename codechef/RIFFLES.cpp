@@ -52,7 +52,7 @@ void permute(vll& arr, vll perm, ll i){
 // 3 1 2 7 6 5 4 (permutation)
 // notice 3 1 2 form a cycle of 3
 // 4 7 form a cycle of 2
-// 6 4 form a cycle of 2
+// 6 5 form a cycle of 2
 // overall is lcm(3,2,2) - 6.
 // complexity is O(n);
 void permute_cycle(vll& arr, vll perm, ll k){
